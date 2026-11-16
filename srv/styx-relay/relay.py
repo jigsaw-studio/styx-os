@@ -3,12 +3,16 @@
 # See LICENSE file in the project root for full license information.
 
 import argparse
+import json
 import os
 import requests
 import socket
 import threading
 
 BUFFER_SIZE = 1024
+API_PREFIX = "/api/"
+FORBIDDEN_PATH_CHARS = "@\\"
+REQUEST_TIMEOUT = 10  # seconds
 
 
 class UDPRelayService:
@@ -18,21 +22,39 @@ class UDPRelayService:
         self.udp_sock.bind(("0.0.0.0", int(udp_port)))
         print(f"UDP relay service started on 0.0.0.0:{udp_port}")
 
+    @staticmethod
+    def parse_request(data):
+        """Return the API path a datagram asks for, or None if it is not a valid request.
+
+        A request is a JSON object {"GET": "/api/..."}. The datagram comes from any
+        device on the network, so it is parsed as data (never evaluated) and the path
+        is restricted to the API before it is placed in a URL.
+        """
+        try:
+            json_obj = json.loads(data.decode('utf-8'))
+        except (UnicodeDecodeError, ValueError):
+            return None
+        if not isinstance(json_obj, dict):
+            return None
+        path = json_obj.get("GET")
+        if not isinstance(path, str) or not path.startswith(API_PREFIX):
+            return None
+        if "//" in path or any(c in FORBIDDEN_PATH_CHARS or c.isspace() or ord(c) < 0x20 for c in path):
+            return None
+        return path
+
     def handle_request(self, data, client_address):
         print("Received:", client_address, data)
         try:
-            # Decode the incoming data
-            json_data = data.decode('utf-8')
-            json_obj = eval(json_data)
-            http_method = json_obj.get("GET", None)
+            path = self.parse_request(data)
 
-            if not http_method:
-                print("Invalid JSON data received.")
+            if not path:
+                print("Invalid request received.")
                 return
 
             # Make HTTP GET request to local server
-            url = f"http://styx-web{http_method}"
-            response = requests.get(url)
+            url = f"http://styx-web{path}"
+            response = requests.get(url, timeout=REQUEST_TIMEOUT)
 
             # Prepare the response for UDP transmission
             udp_response = response.text.encode('utf-8')
