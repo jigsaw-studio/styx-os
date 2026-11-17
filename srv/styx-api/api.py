@@ -43,17 +43,21 @@ def scope_of(remote: Optional[str]) -> str:
     return 'lan' if address.is_private or address.is_link_local else 'wan'
 
 
+def parse_utc(timestamp: str) -> datetime.datetime:
+    """A 'YYYY-MM-DD HH:MM:SS' UTC timestamp as an aware datetime."""
+    return datetime.datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S").replace(tzinfo=datetime.timezone.utc)
+
+
 def seconds_ago(timestamp: Optional[str], now: datetime.datetime) -> int:
     """Whole seconds from a 'YYYY-MM-DD HH:MM:SS' UTC timestamp to now, never below 0."""
     if not timestamp:
         return 0
-    then = datetime.datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S").replace(tzinfo=datetime.timezone.utc)
-    return max(0, int((now - then).total_seconds()))
+    return max(0, int((now - parse_utc(timestamp)).total_seconds()))
 
 
 def epoch_of(timestamp: str) -> int:
     """A 'YYYY-MM-DD HH:MM:SS' UTC timestamp as epoch seconds."""
-    return int(datetime.datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S").replace(tzinfo=datetime.timezone.utc).timestamp())
+    return int(parse_utc(timestamp).timestamp())
 
 
 def split_list(value: Optional[str], limit: int, numeric: bool = False) -> list:
