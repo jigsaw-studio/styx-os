@@ -19,7 +19,7 @@ The Styx project provides a boundary between your devices and the Underworld of 
   - `/v1/links`: one row per local device and host, the traffic between them
   - `/v1/flows`: the newest activity, newest first, optionally for one host
   - styx-godot's Gibson view (a city of data towers) reads these three
-  - `styx-dpi` creates an index on the traffic timestamp the next time it starts; the first start after an update takes longer on a large database
+  - `styx-dpi` indexes the traffic timestamp on its next start; the first start after an update takes longer on a large database
 - Web service with auto-generated HTTPS self-signed certificate
 - UDP relay for access to API across WLAN as an alternative to HTTPS
 - Visualize and interact with network data in Mixed Reality and on touchscreen devices using [styx-godot](https://github.com/Jigsaw-Studio/styx-godot)
