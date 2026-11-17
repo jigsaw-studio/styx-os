@@ -53,6 +53,14 @@ class NetworkMonitor:
             self._create_database()
         elif not os.path.exists(self.db_path):
             self._create_database()
+        self._ensure_indexes()
+
+    def _ensure_indexes(self):
+        # Every API request filters on timestamp; without an index each one reads the whole table.
+        conn = sqlite3.connect(self.db_path)
+        conn.execute('CREATE INDEX IF NOT EXISTS idx_traffic_timestamp ON traffic(timestamp)')
+        conn.commit()
+        conn.close()
 
     def _create_database(self):
         conn = sqlite3.connect(self.db_path)
