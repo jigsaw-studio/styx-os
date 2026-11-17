@@ -27,7 +27,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Date
         - name: start_time
           in: query
@@ -35,7 +35,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Time
         - name: end_date
           in: query
@@ -43,7 +43,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Date
         - name: end_time
           in: query
@@ -51,7 +51,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Time
         - name: relative
           in: query
@@ -59,7 +59,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Relative
         - name: timezone
           in: query
@@ -67,7 +67,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Timezone
         - name: client
           in: query
@@ -75,10 +75,10 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Client
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
@@ -87,7 +87,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/TrafficSummary'
                 title: Response Get Domain Summary V1 Domain Get
-        "422":
+        '422':
           description: Validation Error
           content:
             application/json:
@@ -117,7 +117,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Date
         - name: start_time
           in: query
@@ -125,7 +125,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Time
         - name: end_date
           in: query
@@ -133,7 +133,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Date
         - name: end_time
           in: query
@@ -141,7 +141,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Time
         - name: relative
           in: query
@@ -149,7 +149,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Relative
         - name: timezone
           in: query
@@ -157,7 +157,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Timezone
         - name: client
           in: query
@@ -165,10 +165,10 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Client
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
@@ -177,7 +177,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/TrafficSummary'
                 title: Response Get Ip Summary V1 Ip Get
-        "422":
+        '422':
           description: Validation Error
           content:
             application/json:
@@ -202,7 +202,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Date
         - name: start_time
           in: query
@@ -210,7 +210,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Time
         - name: end_date
           in: query
@@ -218,7 +218,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Date
         - name: end_time
           in: query
@@ -226,7 +226,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Time
         - name: relative
           in: query
@@ -234,7 +234,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Relative
         - name: timezone
           in: query
@@ -242,10 +242,10 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Timezone
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
@@ -254,7 +254,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/TrafficSummary'
                 title: Response Get Local Summary V1 Local Get
-        "422":
+        '422':
           description: Validation Error
           content:
             application/json:
@@ -287,7 +287,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Date
         - name: start_time
           in: query
@@ -295,7 +295,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Time
         - name: end_date
           in: query
@@ -303,7 +303,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Date
         - name: end_time
           in: query
@@ -311,7 +311,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Time
         - name: relative
           in: query
@@ -319,7 +319,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Relative
         - name: timezone
           in: query
@@ -327,7 +327,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Timezone
         - name: client
           in: query
@@ -335,16 +335,16 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Client
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/TrafficTotals'
-        "422":
+        '422':
           description: Validation Error
           content:
             application/json:
@@ -353,7 +353,43 @@ paths:
   /v1/matrix:
     get:
       summary: Retrieve sorted traffic summary by domain or IP
-      description: "Retrieves a sorted summary of network traffic grouped by domain name (if available) or remote IP address. \nEach entry includes:\n\n- **Address:** The domain name if known, otherwise the remote IP (optionally with port).\n- **Sent:** Total bytes sent to this address.\n- **Received:** Total bytes received from this address.\n- **Count:** The number of times this address was accessed.\n\nResults are ordered by **highest access count**.\n\n**Query Parameters:**\n- `start_date`: Start date filter (`YYYY-MM-DD`).\n- `start_time`: Start time filter (`HH:MM:SS`).\n- `end_date`: End date filter (`YYYY-MM-DD`).\n- `end_time`: End time filter (`HH:MM:SS`).\n- `relative`: Relative time range (e.g., `60s`, `30m`, `1h`).\n- `timezone`: Timezone for timestamps (e.g., `UTC`, `America/New_York`).\n- `client`: Filter by a specific local IP.\n\n**Example Response:**\n```json\n[\n  {\n    \"address\": \"example.com:443\",\n    \"sent\": 12345,\n    \"received\": 67890,\n    \"count\": 42\n  },\n  {\n    \"address\": \"192.168.1.100:80\",\n    \"sent\": 5120,\n    \"received\": 10240,\n    \"count\": 18\n  }\n]\n```"
+      description: |-
+        Retrieves a sorted summary of network traffic grouped by domain name (if available) or remote IP address. 
+        Each entry includes:
+
+        - **Address:** The domain name if known, otherwise the remote IP (optionally with port).
+        - **Sent:** Total bytes sent to this address.
+        - **Received:** Total bytes received from this address.
+        - **Count:** The number of times this address was accessed.
+
+        Results are ordered by **highest access count**.
+
+        **Query Parameters:**
+        - `start_date`: Start date filter (`YYYY-MM-DD`).
+        - `start_time`: Start time filter (`HH:MM:SS`).
+        - `end_date`: End date filter (`YYYY-MM-DD`).
+        - `end_time`: End time filter (`HH:MM:SS`).
+        - `relative`: Relative time range (e.g., `60s`, `30m`, `1h`).
+        - `timezone`: Timezone for timestamps (e.g., `UTC`, `America/New_York`).
+        - `client`: Filter by a specific local IP.
+
+        **Example Response:**
+        ```json
+        [
+          {
+            "address": "example.com:443",
+            "sent": 12345,
+            "received": 67890,
+            "count": 42
+          },
+          {
+            "address": "192.168.1.100:80",
+            "sent": 5120,
+            "received": 10240,
+            "count": 18
+          }
+        ]
+        ```
       operationId: get_matrix_summary_v1_matrix_get
       parameters:
         - name: start_date
@@ -362,7 +398,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Date
         - name: start_time
           in: query
@@ -370,7 +406,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Time
         - name: end_date
           in: query
@@ -378,7 +414,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Date
         - name: end_time
           in: query
@@ -386,7 +422,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Time
         - name: relative
           in: query
@@ -394,7 +430,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Relative
         - name: timezone
           in: query
@@ -402,7 +438,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Timezone
         - name: client
           in: query
@@ -410,10 +446,10 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Client
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
@@ -422,7 +458,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/TrafficMatrixSummary'
                 title: Response Get Matrix Summary V1 Matrix Get
-        "422":
+        '422':
           description: Validation Error
           content:
             application/json:
@@ -447,7 +483,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Date
         - name: start_time
           in: query
@@ -455,7 +491,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Time
         - name: end_date
           in: query
@@ -463,7 +499,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Date
         - name: end_time
           in: query
@@ -471,7 +507,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Time
         - name: relative
           in: query
@@ -479,7 +515,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Relative
         - name: timezone
           in: query
@@ -487,7 +523,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Timezone
         - name: client
           in: query
@@ -495,10 +531,10 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Client
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
@@ -507,7 +543,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/TrafficSummary'
                 title: Response Get Remote Summary V1 Remote Get
-        "422":
+        '422':
           description: Validation Error
           content:
             application/json:
@@ -547,7 +583,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Date
         - name: start_time
           in: query
@@ -555,7 +591,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Start Time
         - name: end_date
           in: query
@@ -563,7 +599,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Date
         - name: end_time
           in: query
@@ -571,7 +607,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: End Time
         - name: relative
           in: query
@@ -579,7 +615,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Relative
         - name: timezone
           in: query
@@ -587,7 +623,7 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Timezone
         - name: client
           in: query
@@ -595,10 +631,10 @@ paths:
           schema:
             anyOf:
               - type: string
-              - type: "null"
+              - type: 'null'
             title: Client
       responses:
-        "200":
+        '200':
           description: Successful Response
           content:
             application/json:
@@ -607,7 +643,386 @@ paths:
                 items:
                   $ref: '#/components/schemas/TrafficRawData'
                 title: Response Get Raw Data V1 Raw Get
-        "422":
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /v1/hosts:
+    get:
+      summary: Retrieve the remote hosts reached (one row per host)
+      description: |-
+        Retrieves one row per remote host, ports merged, for a city of towers: the more
+        traffic, the bigger the tower. Hosts of one registrable domain share a **block**.
+        Results are ordered by **highest count**, then host name, and cut at 256 rows.
+
+        Each entry includes:
+
+        - **Host:** The domain name if known, otherwise the remote IP, in lower case.
+        - **Block:** The city block (`example.org` for `www.example.org`, `a.b.0.0/16` for an IPv4 literal).
+        - **Ports:** The distinct ports reached, ascending, at most 16.
+        - **Sent / Received:** Total bytes up / down.
+        - **Count:** How many records (seconds with traffic) there are for this host.
+        - **Scope:** `lan` for a private or link-local address, else `wan`.
+        - **First seen ago / Last seen ago:** Whole seconds from the first and the latest
+          record in the window to now.
+        - **Clients:** The local devices that reached it, at most 8.
+
+        Always `0`, `false` or empty on the Pi: `open`, `blocked` (Pi-hole's refused queries
+        are not captured), `untunnelled`, `tools`, `services`. Another source of the same
+        contract, Layman, fills them.
+
+        **Query Parameters:**
+        - `start_date`, `start_time`, `end_date`, `end_time`: Absolute time filters.
+        - `relative`: Relative time range (e.g., `60s`, `30m`, `1h`).
+        - `timezone`: Timezone for timestamps.
+        - `client`: Filter by a specific local IP.
+
+        **Example Response:**
+        ```json
+        [
+          {
+            "host": "www.example.org",
+            "block": "example.org",
+            "ports": [80, 443],
+            "sent": 5120,
+            "received": 88211,
+            "count": 14,
+            "open": 0,
+            "blocked": 0,
+            "untunnelled": false,
+            "scope": "wan",
+            "first_seen_ago": 840,
+            "last_seen_ago": 3,
+            "clients": ["172.16.100.20"],
+            "tools": [],
+            "services": []
+          }
+        ]
+        ```
+      operationId: get_hosts_v1_hosts_get
+      parameters:
+        - name: start_date
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Start Date
+        - name: start_time
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Start Time
+        - name: end_date
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: End Date
+        - name: end_time
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: End Time
+        - name: relative
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Relative
+        - name: timezone
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Timezone
+        - name: client
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Client
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/HostSummary'
+                title: Response Get Hosts V1 Hosts Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /v1/links:
+    get:
+      summary: Retrieve who talks to whom (one row per device and host)
+      description: |-
+        Retrieves one row per (local device, remote host): the traffic between a device
+        and a tower. Results are ordered by **highest count**, then device, then host, and
+        cut at 512 rows.
+
+        Each entry includes:
+
+        - **Source:** The local device's IP. **Source kind:** always `device` on the Pi.
+        - **Via:** Always empty on the Pi (another source, Layman, names the gate or tool).
+        - **Target:** A host, as in `/v1/hosts`.
+        - **Sent / Received / Count / Last seen ago:** As in `/v1/hosts`, for this pair.
+
+        Always `0` on the Pi: `open`, `blocked`.
+
+        **Query Parameters:**
+        - `start_date`, `start_time`, `end_date`, `end_time`: Absolute time filters.
+        - `relative`: Relative time range (e.g., `60s`, `30m`, `1h`).
+        - `timezone`: Timezone for timestamps.
+        - `client`: Filter by a specific local IP.
+
+        **Example Response:**
+        ```json
+        [
+          {
+            "source": "172.16.100.20",
+            "source_kind": "device",
+            "via": "",
+            "target": "www.example.org",
+            "sent": 5120,
+            "received": 88211,
+            "count": 14,
+            "open": 0,
+            "blocked": 0,
+            "last_seen_ago": 3
+          }
+        ]
+        ```
+      operationId: get_links_v1_links_get
+      parameters:
+        - name: start_date
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Start Date
+        - name: start_time
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Start Time
+        - name: end_date
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: End Date
+        - name: end_time
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: End Time
+        - name: relative
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Relative
+        - name: timezone
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Timezone
+        - name: client
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Client
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LinkSummary'
+                title: Response Get Links V1 Links Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /v1/flows:
+    get:
+      summary: Retrieve the newest activity, optionally for one host
+      description: |-
+        Retrieves the log, newest first: what a tower's menu lists. On the Pi one row is
+        **one second of traffic** between one device and one host, so a busy connection is
+        many rows.
+
+        Each entry includes:
+
+        - **Host:** As in `/v1/hosts`. **Port:** The port reached.
+        - **Time / Ago:** The row's time (epoch seconds, UTC) and the seconds from it to now.
+        - **Source:** The local device's IP. **Via:** Always empty on the Pi.
+        - **Sent / Received:** The row's bytes. **State:** Always `finished` on the Pi.
+
+        Always `null`, `false` or empty on the Pi: `tool`, `proto`, `blocked`, `rule`,
+        `method`, `url`, `label`. Another source of the same contract, Layman, fills them.
+
+        **Query Parameters:**
+        - `start_date`, `start_time`, `end_date`, `end_time`: Absolute time filters.
+        - `relative`: Relative time range (e.g., `60s`, `30m`, `1h`).
+        - `timezone`: Timezone for timestamps.
+        - `client`: Filter by a specific local IP.
+        - `host`: Only this host (case-insensitive, no port).
+        - `limit`: How many rows, 1 to 500 (default 100). Anything else answers 400.
+
+        **Example Response:**
+        ```json
+        [
+          {
+            "host": "www.example.org",
+            "time": 1794856060,
+            "ago": 3,
+            "source": "172.16.100.20",
+            "via": "",
+            "tool": null,
+            "port": 443,
+            "proto": null,
+            "sent": 39,
+            "received": 177,
+            "state": "finished",
+            "blocked": false,
+            "rule": null,
+            "method": null,
+            "url": null,
+            "label": null
+          }
+        ]
+        ```
+      operationId: get_flows_v1_flows_get
+      parameters:
+        - name: start_date
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Start Date
+        - name: start_time
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Start Time
+        - name: end_date
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: End Date
+        - name: end_time
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: End Time
+        - name: relative
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Relative
+        - name: timezone
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Timezone
+        - name: client
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Client
+        - name: host
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Host
+        - name: limit
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: 'null'
+            title: Limit
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FlowRow'
+                title: Response Get Flows V1 Flows Get
+        '422':
           description: Validation Error
           content:
             application/json:
@@ -615,6 +1030,82 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
 components:
   schemas:
+    FlowRow:
+      properties:
+        host:
+          type: string
+          title: Host
+        time:
+          type: integer
+          title: Time
+        ago:
+          type: integer
+          title: Ago
+          default: 0
+        source:
+          type: string
+          title: Source
+        via:
+          type: string
+          title: Via
+          default: ''
+        tool:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Tool
+        port:
+          anyOf:
+            - type: integer
+            - type: 'null'
+          title: Port
+        proto:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Proto
+        sent:
+          type: integer
+          title: Sent
+          default: 0
+        received:
+          type: integer
+          title: Received
+          default: 0
+        state:
+          type: string
+          title: State
+          default: finished
+        blocked:
+          type: boolean
+          title: Blocked
+          default: false
+        rule:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Rule
+        method:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Method
+        url:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Url
+        label:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Label
+      type: object
+      required:
+        - host
+        - time
+        - source
+      title: FlowRow
     HTTPValidationError:
       properties:
         detail:
@@ -624,6 +1115,124 @@ components:
           title: Detail
       type: object
       title: HTTPValidationError
+    HostSummary:
+      properties:
+        host:
+          type: string
+          title: Host
+        block:
+          type: string
+          title: Block
+        ports:
+          items:
+            type: integer
+          type: array
+          title: Ports
+          default: []
+        sent:
+          type: integer
+          title: Sent
+          default: 0
+        received:
+          type: integer
+          title: Received
+          default: 0
+        count:
+          type: integer
+          title: Count
+          default: 1
+        open:
+          type: integer
+          title: Open
+          default: 0
+        blocked:
+          type: integer
+          title: Blocked
+          default: 0
+        untunnelled:
+          type: boolean
+          title: Untunnelled
+          default: false
+        scope:
+          type: string
+          title: Scope
+          default: ''
+        first_seen_ago:
+          type: integer
+          title: First Seen Ago
+          default: 0
+        last_seen_ago:
+          type: integer
+          title: Last Seen Ago
+          default: 0
+        clients:
+          items:
+            type: string
+          type: array
+          title: Clients
+          default: []
+        tools:
+          items:
+            type: string
+          type: array
+          title: Tools
+          default: []
+        services:
+          items:
+            type: string
+          type: array
+          title: Services
+          default: []
+      type: object
+      required:
+        - host
+        - block
+      title: HostSummary
+    LinkSummary:
+      properties:
+        source:
+          type: string
+          title: Source
+        source_kind:
+          type: string
+          title: Source Kind
+        via:
+          type: string
+          title: Via
+          default: ''
+        target:
+          type: string
+          title: Target
+        sent:
+          type: integer
+          title: Sent
+          default: 0
+        received:
+          type: integer
+          title: Received
+          default: 0
+        count:
+          type: integer
+          title: Count
+          default: 1
+        open:
+          type: integer
+          title: Open
+          default: 0
+        blocked:
+          type: integer
+          title: Blocked
+          default: 0
+        last_seen_ago:
+          type: integer
+          title: Last Seen Ago
+          default: 0
+      type: object
+      required:
+        - source
+        - source_kind
+        - target
+      title: LinkSummary
     TrafficMatrixSummary:
       properties:
         address:
@@ -668,7 +1277,7 @@ components:
         domain:
           anyOf:
             - type: string
-            - type: "null"
+            - type: 'null'
           title: Domain
       type: object
       required:
