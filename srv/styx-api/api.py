@@ -187,25 +187,30 @@ class TrafficAPI:
                 time_amount = int(relative[:-1])
             except ValueError:
                 raise HTTPException(status_code=400, detail="Invalid relative time")
+            if time_amount < 0:
+                raise HTTPException(status_code=400, detail="Invalid relative time")
             unit = relative[-1]
 
-            if unit == 's':
-                delta = datetime.timedelta(seconds=time_amount)
-            elif unit == 'm':
-                delta = datetime.timedelta(minutes=time_amount)
-            elif unit == 'h':
-                delta = datetime.timedelta(hours=time_amount)
-            elif unit == 'd':
-                delta = datetime.timedelta(days=time_amount)
-            elif unit == 'y':
-                delta = dateutil.relativedelta.relativedelta(years=time_amount)
-            else:
-                raise HTTPException(status_code=400, detail="Invalid relative time unit")
+            try:
+                if unit == 's':
+                    delta = datetime.timedelta(seconds=time_amount)
+                elif unit == 'm':
+                    delta = datetime.timedelta(minutes=time_amount)
+                elif unit == 'h':
+                    delta = datetime.timedelta(hours=time_amount)
+                elif unit == 'd':
+                    delta = datetime.timedelta(days=time_amount)
+                elif unit == 'y':
+                    delta = dateutil.relativedelta.relativedelta(years=time_amount)
+                else:
+                    raise HTTPException(status_code=400, detail="Invalid relative time unit")
 
-            if is_start:
-                utc_time = (utc_now - delta)
-            else:
-                utc_time = utc_now
+                if is_start:
+                    utc_time = (utc_now - delta)
+                else:
+                    utc_time = utc_now
+            except (OverflowError, ValueError):
+                raise HTTPException(status_code=400, detail="Relative time out of range")
 
             return utc_time.strftime("%Y-%m-%d %H:%M:%S")
 

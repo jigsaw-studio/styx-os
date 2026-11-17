@@ -173,7 +173,7 @@ class HostsTest(ApiTest):
 
     def test_malformed_relative_is_400(self):
         for path in ("/v1/hosts", "/v1/links", "/v1/flows", "/v1/matrix"):
-            for bad in ("abc", "m", "5x"):
+            for bad in ("abc", "m", "5x", "-5m", "99999999999y", "99999999999999d"):
                 self.assertEqual(self.client.get(f"{path}?relative={bad}").status_code, 400, f"{path} {bad}")
 
     def test_matrix_is_unchanged(self):
